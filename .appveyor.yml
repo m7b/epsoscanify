@@ -1,0 +1,8 @@
+build: off
+
+install:
+    - cmd: choco install naps2
+#    - cmd: SET PATH=%PATH%;C:\Python27\Scripts
+
+test_script:
+#    - cmd: platformio run
