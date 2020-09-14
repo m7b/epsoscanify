@@ -5,4 +5,4 @@ install:
 #    - cmd: SET PATH=%PATH%;C:\Python27\Scripts
 
 test_script:
-    - cmd: naps2.console --help
+    - cmd: "C:\Program Files (x86)\NAPS2\NAPS2.Console.exe" --help
