@@ -9,3 +9,4 @@ install:
 
 test_script:
     - cmd: NAPS2.Console.exe --help
+    - cmd: cscript scan.vbs
