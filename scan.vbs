@@ -17,9 +17,9 @@ if Len(argument) > 0 then
     'Delete source file
     Set fso = CreateObject("Scripting.FileSystemObject") 'Calls the File System Object
     fso.DeleteFile(argument) 'Deletes the file throught the DeleteFile function
+else
+
+    WScript.Echo "The arguements you passed me are: " & cmd
+    WScript.Quit
+
 end if
-
-
-'WScript.Echo "The arguements you passed me are: " & cmd
-'WScript.Quit
-
