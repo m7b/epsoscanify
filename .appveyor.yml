@@ -5,4 +5,4 @@ install:
 #    - cmd: SET PATH=%PATH%;C:\Python27\Scripts
 
 test_script:
-#    - cmd: platformio run
+    - cmd: naps2.console --help
