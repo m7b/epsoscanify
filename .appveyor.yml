@@ -8,5 +8,7 @@ install:
     - cmd: NAPS2.Console.exe --install ocr-deu
 
 test_script:
+    - cmd: wget https://ftp.epson.com/drivers/epson17853.exe
+    - cmd: wget https://ftp.epson.com/drivers/EEM_31153.exe
     - cmd: NAPS2.Console.exe --help
     - cmd: cscript scan.vbs
