@@ -26,10 +26,10 @@ end if
 
 if Len(argument) > 0 then
     'The command line has to be in the form ...
-    'cmd: NAPS2.Console -i %1 -n 0 -o "C:\Users\Public\Pictures\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf" --ocrlang "deu+eng"
+    'cmd: NAPS2.Console -i %1 -n 0 -o "C:\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf" --ocrlang "deu+eng"
 	'%1 is the argument which is passed to this script. This shoud be the
 	'scanned TIFF image.
-    cmd = """C:\Program Files (x86)\NAPS2\NAPS2.Console.exe""" & " -i " & """" & argument & """" & " --verbose -n 0 -o ""C:\Users\Public\Pictures\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf"" --ocrlang ""deu+eng"""
+    cmd = """C:\Program Files (x86)\NAPS2\NAPS2.Console.exe""" & " -i " & """" & argument & """" & " --verbose -n 0 -o ""C:\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf"" --ocrlang ""deu+eng"""
     set wshshell = CreateObject("WScript.Shell")
     wshshell.run cmd, 1, True
 
