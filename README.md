@@ -12,7 +12,7 @@ Master:   | [![Build status](https://ci.appveyor.com/api/projects/status/624byor
 This repo is about using the Epson BX925FWD / Work Force 840 as a PDF scanner
 with OCR via NAPS2.
 
-[Printer](https://www.epson.de/files/assets/converted/510m-310m/e/p/s/o/epson-bx925fwd_web.png.png)
+![Printer](https://www.epson.de/files/assets/converted/510m-310m/e/p/s/o/epson-bx925fwd_web.png.png)
 
 Scanning is done with the Epson Event Manager.
 OCR process is done with NAPS2.
