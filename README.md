@@ -29,6 +29,8 @@ with OCR via NAPS2.
 4. Enable OCR with support for preferred language. For this open command promt
    and execute following commands:
    
-   - `NAPS2.Console --install generic-import´
-   - `NAPS2.Console --install ocr-eng`
-   - `NAPS2.Console --install ocr-deu`
+   ```batch
+   NAPS2.Console --install generic-import
+   NAPS2.Console --install ocr-eng
+   NAPS2.Console --install ocr-deu
+   ```
