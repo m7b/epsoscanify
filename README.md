@@ -30,6 +30,7 @@ OCR process is done with NAPS2.
    and execute following commands:
    
    ```batch
+   CD C:\Program Files (x86)\NAPS2
    NAPS2.Console --install generic-import
    NAPS2.Console --install ocr-eng
    NAPS2.Console --install ocr-deu
