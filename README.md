@@ -35,6 +35,7 @@ OCR process is done with NAPS2.
    NAPS2.Console --install ocr-deu
    ```
 
-4. Open Epson Ecent Manager and create a new job
+4. Open Epson Event Manager and create a new job
 
    ![Pic 00](pictures/00_open_eem_2.gif)
+   ![Pic 00](pictures/10_create_new_job.gif)
