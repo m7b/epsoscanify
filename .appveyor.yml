@@ -2,9 +2,10 @@ build: off
 
 install:
     - cmd: choco install naps2
-    - cmd: C:\Program Files (x86)\NAPS2\NAPS2.Console.exe --install generic-import
-    - cmd: C:\Program Files (x86)\NAPS2\NAPS2.Console.exe --install ocr-eng
-    - cmd: C:\Program Files (x86)\NAPS2\NAPS2.Console.exe --install ocr-deu
+    - cmd: SET PATH=%PATH%;C:\Program Files (x86)\NAPS2
+    - cmd: NAPS2.Console.exe --install generic-import
+    - cmd: NAPS2.Console.exe --install ocr-eng
+    - cmd: NAPS2.Console.exe --install ocr-deu
 
 test_script:
     - cmd: curl -fsS -o epson17853.exe https://ftp.epson.com/drivers/epson17853.exe
