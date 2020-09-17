@@ -2,7 +2,7 @@ build: off
 
 install:
     - cmd: choco install naps2
-    - cmd: SET NAPS2EXE=C:\Program Files (x86)\NAPS2\NAPS2.Console.exe
+    env: NAPS2EXE=C:\Program Files (x86)\NAPS2\NAPS2.Console.exe
     - cmd: %NAPS2EXE% --install generic-import
     - cmd: %NAPS2EXE% --install ocr-eng
     - cmd: %NAPS2EXE% --install ocr-deu
