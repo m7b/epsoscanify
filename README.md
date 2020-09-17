@@ -23,10 +23,7 @@ with OCR via NAPS2.
 
 2. Install NAPS2 ([Link](https://www.naps2.com/))
 
-3. Expand the environment variable `PATH` with the installation folder of
-   NAPS2. So that windows can find the `NAPS2.Console.exe` command.
-
-4. Enable OCR with support for preferred language. For this open command promt
+3. Enable OCR with support for preferred language. For this open command promt
    and execute following commands:
    
    ```batch
@@ -35,4 +32,4 @@ with OCR via NAPS2.
    NAPS2.Console --install ocr-deu
    ```
 
-5. more to come
+4. more to come

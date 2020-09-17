@@ -1,15 +1,34 @@
-'Only naps.console:
-'-i %File -n 0 -o "C:\Users\Public\Pictures\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf" --ocrlang "deu+eng" & del %File
+'******************************************************************************
+' File:    scan.vbs
+' Author:  (c) M. Buttig
+' Version: 1.0.0
+'
+' Description:
+' ------------
+' This vbs scripts takes the scanned TIFF image which is passed as an argument
+' to this script. It creates a PDF file of that image with OCR into the same
+' directory of the image. After creating the PDF file, it deletes the passed
+' TIFF image.
+'
+' Version history:
+' ----------------
+' 1.0.0 - initial Version
+'
+'******************************************************************************
+
 dim argument
+Dim cmd
+Dim fso
+
 if wscript.arguments.count > 0 then
     argument = wscript.arguments(0)
 end if
 
-
-Dim cmd
-Dim fso
 if Len(argument) > 0 then
-    'cmd: naps2.console -i %1 -n 0 -o "C:\Users\Public\Pictures\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf" --ocrlang "deu+eng"
+    'The command line has to be in the form ...
+    'cmd: NAPS2.Console -i %1 -n 0 -o "C:\Users\Public\Pictures\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf" --ocrlang "deu+eng"
+	'%1 is the argument which is passed to this script. This shoud be the
+	'scanned TIFF image.
     cmd = """C:\Program Files (x86)\NAPS2\NAPS2.Console.exe""" & " -i " & """" & argument & """" & " --verbose -n 0 -o ""C:\Users\Public\Pictures\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf"" --ocrlang ""deu+eng"""
     set wshshell = CreateObject("WScript.Shell")
     wshshell.run cmd, 1, True
@@ -18,8 +37,8 @@ if Len(argument) > 0 then
     Set fso = CreateObject("Scripting.FileSystemObject") 'Calls the File System Object
     fso.DeleteFile(argument) 'Deletes the file throught the DeleteFile function
 else
-
     WScript.Echo "The arguements you passed me are: " & cmd
     WScript.Quit
-
 end if
+
+'*** End
