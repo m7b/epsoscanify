@@ -38,7 +38,7 @@ OCR process is done with NAPS2.
 4. Open Epson Event Manager and create a new job
 
 <p align="center">
-  <img src="pictures/00_open_eem_2.gif">
+  <img src="pictures/00_open_eem.gif">
 </p>
 
 <p align="center">
