@@ -23,7 +23,7 @@ with OCR via NAPS2.
 
 2. Install NAPS2 ([Link](https://www.naps2.com/))
 
-3. Enable OCR with support for preferred language. For this open command promt
+3. Install import function and OCR support for preferred language. For this open command promt
    and execute following commands:
    
    ```batch
