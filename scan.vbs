@@ -5,10 +5,10 @@
 '
 ' Description:
 ' ------------
-' This vbs scripts takes the scanned TIFF image which is passed as an argument
-' to this script. It creates a PDF file of that image with OCR into the same
-' directory of the image. After creating the PDF file, it deletes the passed
-' TIFF image.
+' This vbs scripts takes the scanned TIFF image (single or multipage) which is
+' passed as an argument. It creates a PDF file of that image with OCR into the
+' same directory of the image. After creating the PDF file, it deletes the
+' passed TIFF image.
 '
 ' Version history:
 ' ----------------
@@ -16,7 +16,7 @@
 '
 '******************************************************************************
 
-dim argument
+Dim argument
 Dim cmd
 Dim fso
 
