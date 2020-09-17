@@ -23,13 +23,12 @@ with OCR via NAPS2.
 
 2. Install NAPS2 ([Link](https://www.naps2.com/))
 
-3. Expand the environment variable ´PATH´ with the installation folder of
-   NAPS2. So that windows can find the ´NAPS2.console´ command.
+3. Expand the environment variable `PATH` with the installation folder of
+   NAPS2. So that windows can find the `NAPS2.Console.exe` command.
 
-4. Enable OCR with support for preferred language
-
-   - Open command promt and execute following commands:
+4. Enable OCR with support for preferred language. For this open command promt
+   and execute following commands:
    
-     * ´NAPS2.console install -ocr´
-     * ´NAPS2.console install -lang=eng´
-     * ´NAPS2.console install -lang=deu´
+   - `NAPS2.Console --install generic-import´
+   - `NAPS2.Console --install ocr-eng`
+   - `NAPS2.Console --install ocr-deu`
