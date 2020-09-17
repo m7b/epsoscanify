@@ -44,3 +44,13 @@ OCR process is done with NAPS2.
 <p align="center">
   <img src="pictures/10_create_new_job.gif">
 </p>
+
+<p align="center">
+  <img src="pictures/20_setup_job.gif">
+</p>
+
+5. Assign new created job with button
+
+<p align="center">
+  <img src="pictures/30_assign_button_to_job.gif">
+</p>
