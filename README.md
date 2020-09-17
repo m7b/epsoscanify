@@ -34,3 +34,5 @@ with OCR via NAPS2.
    NAPS2.Console --install ocr-eng
    NAPS2.Console --install ocr-deu
    ```
+
+5. more to come
