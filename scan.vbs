@@ -16,6 +16,12 @@
 '
 '******************************************************************************
 
+
+' Configure section
+' -----------------
+
+' End configure section
+
 Dim argument
 Dim cmd
 Dim fso
