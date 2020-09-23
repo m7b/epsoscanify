@@ -48,6 +48,7 @@ else
     WScript.Echo "The arguements you passed me are: " & argument
     cmd = """" & path_NAPS_Console_exe & """" & " --help"
     set wshshell = CreateObject("WScript.Shell")
+    Dim intReturn
     intReturn = wshshell.run cmd, 1, True
     WScript.Echo "Test NAPS.Console: " & intReturn
 end if
