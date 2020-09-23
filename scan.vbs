@@ -16,10 +16,11 @@
 '
 '******************************************************************************
 
+Dim path_NAPS_Console_exe
 
 ' Configure section
 ' -----------------
-Dim path_NAPS_Console_exe = "C:\Program Files (x86)\NAPS2\NAPS2.Console.exe"
+path_NAPS_Console_exe = "C:\Program Files (x86)\NAPS2\NAPS2.Console.exe"
 
 ' End configure section
 
