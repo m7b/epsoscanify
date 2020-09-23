@@ -46,31 +46,7 @@ if Len(argument) > 0 then
     fso.DeleteFile(argument) 'Deletes the file throught the DeleteFile function
 else
     WScript.Echo "The arguements you passed me are: " & argument
-    
-    WScript.Echo "Test NAPS.Console: " & i
-    cmd = """" & path_NAPS_Console_exe & """" & " --help"
-
-    Const WshRunning = 0
-    Const WshFinished = 1
-    Const WshFailed = 2
-    
-    Set WshShell = CreateObject("WScript.Shell")
-    Set WshShellExec = WshShell.Exec(cmd)
-
-    Do While WshShellExec.Status = WshRunning
-         WScript.Sleep 100
-    Loop
-    
-    Select Case WshShellExec.Status
-        Case WshFinished
-            strOutput = WshShellExec.StdOut.ReadAll()
-        Case WshFailed
-            strOutput = WshShellExec.StdErr.ReadAll()
-    End Select
-
-    WScript.StdOut.Write(strOutput)  'write results to the command line
-    WScript.Echo(strOutput)          'write results to default output
-	
+    WScript.Echo "NAPS executable is set to: " & path_NAPS_Console_exe	
 end if
 
 '*** End
