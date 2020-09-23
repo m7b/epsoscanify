@@ -46,11 +46,10 @@ if Len(argument) > 0 then
     fso.DeleteFile(argument) 'Deletes the file throught the DeleteFile function
 else
     WScript.Echo "The arguements you passed me are: " & argument
-	WScript.Echo "Test NAPS.Console:"
     cmd = """" & path_NAPS_Console_exe & """" & " --help"
     set wshshell = CreateObject("WScript.Shell")
-    wshshell.run cmd, 1, True
-    WScript.Quit
+    Return = wshshell.run cmd, 1, True
+    WScript.Echo "Test NAPS.Console: " & Return
 end if
 
 '*** End
