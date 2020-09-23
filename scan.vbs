@@ -22,7 +22,7 @@ Dim path_NAPS_Console_exe
 ' -----------------
 path_NAPS_Console_exe = "C:\Program Files (x86)\NAPS2\NAPS2.Console.exe"
 
-' End configure section
+' End configure section, NO CHANGES FROM HERE
 
 Dim argument
 Dim cmd
