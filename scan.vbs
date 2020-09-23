@@ -49,6 +49,10 @@ else
     
     WScript.Echo "Test NAPS.Console: " & i
     cmd = """" & path_NAPS_Console_exe & """" & " --help"
+
+    Const WshRunning = 0
+    Const WshFinished = 1
+    Const WshFailed = 2
     
     Set WshShell = CreateObject("WScript.Shell")
     Set WshShellExec = WshShell.Exec(cmd)
@@ -56,10 +60,6 @@ else
     Do While WshShellExec.Status = WshRunning
          WScript.Sleep 100
     Loop
-    
-    Const WshRunning = 0
-    Const WshFinished = 1
-    Const WshFailed = 2
     
     Select Case WshShellExec.Status
         Case WshFinished
