@@ -19,6 +19,7 @@
 
 ' Configure section
 ' -----------------
+Dim path_NAPS_Console_exe = "C:\Program Files (x86)\NAPS2\NAPS2.Console.exe"
 
 ' End configure section
 
@@ -35,7 +36,7 @@ if Len(argument) > 0 then
     'cmd: NAPS2.Console -i %1 -n 0 -o "C:\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf" --ocrlang "deu+eng"
 	'%1 is the argument which is passed to this script. This shoud be the
 	'scanned TIFF image.
-    cmd = """C:\Program Files (x86)\NAPS2\NAPS2.Console.exe""" & " -i " & """" & argument & """" & " --verbose -n 0 -o ""C:\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf"" --ocrlang ""deu+eng"""
+	cmd = """" & path_NAPS_Console_exe & """" & " -i " & """" & argument & """" & " --verbose -n 0 -o ""C:\Scans\scan_$(YYYY)-$(MM)-$(DD)_$(hh)-$(mm)-$(ss).pdf"" --ocrlang ""deu+eng"""
     set wshshell = CreateObject("WScript.Shell")
     wshshell.run cmd, 1, True
 
@@ -43,7 +44,11 @@ if Len(argument) > 0 then
     Set fso = CreateObject("Scripting.FileSystemObject") 'Calls the File System Object
     fso.DeleteFile(argument) 'Deletes the file throught the DeleteFile function
 else
-    WScript.Echo "The arguements you passed me are: " & cmd
+    WScript.Echo "The arguements you passed me are: " & argument
+	WScript.Echo "Test NAPS.Console:"
+    cmd = """" & path_NAPS_Console_exe & """" & " --help"
+    set wshshell = CreateObject("WScript.Shell")
+    wshshell.run cmd, 1, True
     WScript.Quit
 end if
 
