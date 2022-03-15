@@ -41,7 +41,7 @@ deploy:
       provider: GitHub
       auth_token:
           secure: BS0OnZTLOLnMhVaRVoIKtU5knp/cPdgY4ADI3SGLhyjyYLoIUU+pthc+tK2yTRad
-      artifact: epsoscanify.zip
+      artifact: epsoscanify-$(APPVEYOR_REPO_TAG_NAME).zip
       draft: false
       prerelease: false
       on:
