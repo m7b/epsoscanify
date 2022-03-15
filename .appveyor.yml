@@ -1,4 +1,4 @@
-skip_tags: true
+#skip_tags: true
 
 build: off
 
@@ -35,7 +35,8 @@ artifacts:
 deploy:
 
     # Deploy to GitHub Releases
-    - release: epsoscanify-$(APPVEYOR_REPO_TAG_NAME)
+    - tag: $(APPVEYOR_REPO_TAG_NAME)
+      release: epsoscanify-$(APPVEYOR_REPO_TAG_NAME)
       description: 'Release description'
       provider: GitHub
       auth_token:
