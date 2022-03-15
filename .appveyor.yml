@@ -33,7 +33,7 @@ artifacts:
 deploy:
 
     # Deploy to GitHub Releases
-    - release: epsoscanify-v$(APPVEYOR_BUILD_VERSION)
+    - release: epsoscanify-$(APPVEYOR_REPO_TAG_NAME)
       #description: 'Release description'
       provider: GitHub
       auth_token:
