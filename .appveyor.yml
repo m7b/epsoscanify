@@ -35,7 +35,7 @@ deploy:
     # Deploy to GitHub Releases
     - provider: GitHub
       auth_token:
-          secure: <your encrypted token>
+          secure: BS0OnZTLOLnMhVaRVoIKtU5knp/cPdgY4ADI3SGLhyjyYLoIUU+pthc+tK2yTRad
       artifact: epsoscanify.zip           # upload all NuGet packages to release assets
       draft: false
       prerelease: false
