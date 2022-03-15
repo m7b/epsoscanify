@@ -14,7 +14,7 @@ test_script:
     - cmd: cscript scan.vbs
 
 after_test:
-    - cmd: 7z a myapp.zip %APPVEYOR_BUILD_FOLDER%\scan.vbs %APPVEYOR_BUILD_FOLDER%\*.exe
+    - cmd: 7z a epsoscanify.zip %APPVEYOR_BUILD_FOLDER%\scan.vbs %APPVEYOR_BUILD_FOLDER%\*.exe
 
 artifacts:
     - path: epsoscanify.zip
