@@ -1,5 +1,3 @@
-#skip_tags: true
-
 build: off
 
 install:
@@ -29,9 +27,6 @@ artifacts:
 #---------------------------------#
 #     deployment configuration    #
 #---------------------------------#
-
-# providers: Local, FTP, WebDeploy, AzureCS, AzureBlob, S3, NuGet, Environment
-# provider names are case-sensitive!
 deploy:
 
     # Deploy to GitHub Releases

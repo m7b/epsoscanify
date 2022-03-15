@@ -20,9 +20,9 @@ OCR process is done with NAPS2.
 1. Update firmware (not mandatory) and drivers for the epson device
    ([EPSON driver update page](https://epson.com/Support/Printers/All-In-Ones/WorkForce-Series/Epson-WorkForce-840/s/SPT_C11CA97201)).
    
-   - Recovery Mode Firmware (for firmware upgrade, optional)
-   - Scanner Driver and EPSON Scan Utility
-   - Epson Event Manager
+   - Recovery Mode Firmware `FW_CS01I6.exe` (for firmware upgrade, optional)
+   - Scanner Driver and EPSON Scan Utility `epson17853.exe`
+   - Epson Event Manager `EEM_31153.exe`
 
 2. Install NAPS2 ([Link](https://www.naps2.com/))
 
