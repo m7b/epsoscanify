@@ -13,7 +13,7 @@ test_script:
     - cmd: curl -fsS -o EEM_31153.exe https://ftp.epson.com/drivers/EEM_31153.exe
     - cmd: cscript scan.vbs
 
-after_build:
+after_test:
     - cmd: 7z a myapp.zip %APPVEYOR_BUILD_FOLDER%\scan.vbs %APPVEYOR_BUILD_FOLDER%\*.exe
 
 artifacts:
