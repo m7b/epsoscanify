@@ -33,10 +33,12 @@ artifacts:
 deploy:
 
     # Deploy to GitHub Releases
-    - provider: GitHub
+    - release: epsoscanify-v$(APPVEYOR_BUILD_VERSION)
+      #description: 'Release description'
+      provider: GitHub
       auth_token:
           secure: BS0OnZTLOLnMhVaRVoIKtU5knp/cPdgY4ADI3SGLhyjyYLoIUU+pthc+tK2yTRad
-      artifact: epsoscanify.zip           # upload all NuGet packages to release assets
+      artifact: epsoscanify.zip
       draft: false
       prerelease: false
       on:
