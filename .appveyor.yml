@@ -23,7 +23,7 @@ after_test:
     - cmd: 7z a epsoscanify-$(APPVEYOR_REPO_TAG_NAME).zip %APPVEYOR_BUILD_FOLDER%\scan.vbs %APPVEYOR_BUILD_FOLDER%\*.exe
 
 artifacts:
-    - path: epsoscanify.zip
+    - path: epsoscanify-$(APPVEYOR_REPO_TAG_NAME).zip
       name: epsoscanify
 
 #---------------------------------#
