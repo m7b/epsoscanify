@@ -1,6 +1,7 @@
 build: off
 
 install:
+    - cmd: choco upgrade chocolatey
     - cmd: choco install naps2
     - cmd: SET PATH=%PATH%;C:\Program Files (x86)\NAPS2
     - cmd: NAPS2.Console.exe --install generic-import
