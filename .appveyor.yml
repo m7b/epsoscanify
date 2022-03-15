@@ -1,3 +1,5 @@
+skip_tags: true
+
 build: off
 
 install:
@@ -18,7 +20,7 @@ test_script:
     - cmd: cscript scan.vbs
 
 after_test:
-    - cmd: 7z a epsoscanify.zip %APPVEYOR_BUILD_FOLDER%\scan.vbs %APPVEYOR_BUILD_FOLDER%\*.exe
+    - cmd: 7z a epsoscanify-$(APPVEYOR_REPO_TAG_NAME).zip %APPVEYOR_BUILD_FOLDER%\scan.vbs %APPVEYOR_BUILD_FOLDER%\*.exe
 
 artifacts:
     - path: epsoscanify.zip
@@ -34,7 +36,7 @@ deploy:
 
     # Deploy to GitHub Releases
     - release: epsoscanify-$(APPVEYOR_REPO_TAG_NAME)
-      #description: 'Release description'
+      description: 'Release description'
       provider: GitHub
       auth_token:
           secure: BS0OnZTLOLnMhVaRVoIKtU5knp/cPdgY4ADI3SGLhyjyYLoIUU+pthc+tK2yTRad
@@ -44,17 +46,3 @@ deploy:
       on:
           branch: master                # release from master branch only
           APPVEYOR_REPO_TAG: true       # deploy on tag push only
-
-
-# deploy:
-#   release: myproduct-v$(APPVEYOR_BUILD_VERSION)
-#   description: 'Release description'
-#   provider: GitHub
-#   auth_token:
-#     secure: <your encrypted token> # your encrypted token from GitHub
-#   artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
-#   draft: false
-#   prerelease: false
-#   on:
-#     branch: master                 # release from master branch only
-#     APPVEYOR_REPO_TAG: true        # deploy on tag push only
