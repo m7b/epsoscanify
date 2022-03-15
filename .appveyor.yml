@@ -9,7 +9,11 @@ install:
     - cmd: NAPS2.Console.exe --install ocr-deu
 
 test_script:
+    # Download Recovery Mode Firmware CS01I6
+    - cmd: curl -fsS -o FW_CS01I6.exe https://ftp.epson.com/drivers/FW_CS01I6.exe
+    # Download Scanner Driver and EPSON Scan Utility v3.7.7.1
     - cmd: curl -fsS -o epson17853.exe https://ftp.epson.com/drivers/epson17853.exe
+    # Download Epson Event Manager v3.11.53
     - cmd: curl -fsS -o EEM_31153.exe https://ftp.epson.com/drivers/EEM_31153.exe
     - cmd: cscript scan.vbs
 
@@ -30,12 +34,14 @@ deploy:
 
     # Deploy to GitHub Releases
     - provider: GitHub
+      auth_token:
+          secure: <your encrypted token>
       artifact: epsoscanify.zip           # upload all NuGet packages to release assets
       draft: false
       prerelease: false
       on:
-        branch: master                # release from master branch only
-        APPVEYOR_REPO_TAG: true       # deploy on tag push only
+          branch: master                # release from master branch only
+          APPVEYOR_REPO_TAG: true       # deploy on tag push only
 
 
 # deploy:
